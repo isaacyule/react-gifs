@@ -7,14 +7,16 @@ class Gif extends Component {
 
   }
 
+  handleClick = () => {
+    this.props.selectGif(this.props.id);
+  }
+
   render() {
     return (
-      <div className="Gif">
-        <img src={this.props.id} alt=""/>
-      </div>
+      <img className="gif" onClick={this.handleClick} src={`https://media2.giphy.com/media/${this.props.id}/200.gif`} />
     );
   }
 
 }
 
-export default Gif
+export default Gif;
